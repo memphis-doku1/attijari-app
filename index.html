@@ -8,6 +8,9 @@
     <!-- Icônes de l'application -->
     <link rel="icon" type="image/png" href="attijari.png">
     <link rel="apple-touch-icon" href="attijari.png">
+    
+    <!-- Manifest PWA -->
+    <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#eb5545">
 
     <script src="https://cdn.tailwindcss.com"></script>
@@ -1558,6 +1561,21 @@
             } else {
                 alert("Veuillez saisir entièrement votre code PIN à 6 chiffres.");
             }
+        }
+    </script>
+    
+    <!-- Enregistrement du Service Worker pour la PWA -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./sw.js')
+                    .then(registration => {
+                        console.log('ServiceWorker enregistré avec succès: ', registration.scope);
+                    })
+                    .catch(err => {
+                        console.log('Échec de l\'enregistrement du ServiceWorker: ', err);
+                    });
+            });
         }
     </script>
 </body>
