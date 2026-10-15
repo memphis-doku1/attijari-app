@@ -1,8 +1,8 @@
 {
-  "id": "/attijari-pro-app/",
+  "id": "/attijari-pro-app-v2/",
   "name": "Attijari pro - Espace Auto-Entrepreneur",
   "short_name": "Attijari pro",
-  "start_url": "./index.html",
+  "start_url": "./index.html?v=2",
   "scope": "./",
   "display": "standalone",
   "background_color": "#f3f4f6",
